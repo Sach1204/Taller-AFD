@@ -67,8 +67,8 @@ int split(const char *linea, const char *sep, char arr[][50]) {
 }
 
 /* Cargar configuración desde archivo */
-void cargar_configuracion(const char *archivo_conf) {
-    FILE *f = fopen(archivo_conf, "r");
+void cargar_configuracion(const char *archivo_configuracion) {
+    FILE *f = fopen(archivo_configuracion, "r");
     if (!f) {
         perror("No se pudo abrir archivo de configuración");
         exit(1);
@@ -151,7 +151,7 @@ bool evaluar_cadena(const char *cadena) {
 }
 
 int main(void) {
-    cargar_configuracion("Conf.txt");
+    cargar_configuracion("Configuracion.txt");
 
     FILE *f = fopen("Cadenas.txt", "r");
     if (!f) {
@@ -174,6 +174,7 @@ int main(void) {
     fclose(f);
     return 0;
 }
+
 
 
 
