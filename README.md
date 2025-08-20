@@ -122,12 +122,7 @@ def main():
 
 <img width="1068" height="326" alt="image" src="https://github.com/user-attachments/assets/d5325059-c292-4587-823c-5052c3544b40" />
 
-# AFD - Autómata Finito Determinista en C
-
-Este proyecto implementa un **Autómata Finito Determinista (AFD)** en lenguaje C.  
-El programa lee una configuración desde un archivo (`Conf.txt`) y una lista de cadenas desde otro (`Cadenas.txt`).  
-Después evalúa cada cadena según el autómata y muestra en pantalla si la cadena es **ACEPTADA** o **NO ACEPTA**.
-
+**Autómata Finito Determinista (AFD)** en lenguaje C.  
 ---
 ## Codigo en C
 ```c
