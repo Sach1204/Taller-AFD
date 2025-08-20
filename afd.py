@@ -1,5 +1,6 @@
-def cargar_configuracion(archivo_conf):
-    with open(archivo_conf, 'r') as f:
+
+def cargar_configuracion(archivo_configuracion):
+    with open(archivo_configuracion, 'r') as f:
         lineas = [line.strip() for line in f if line.strip() and not line.startswith("#")]
 
     estados = lineas[0].split(',')
