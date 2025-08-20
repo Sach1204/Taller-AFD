@@ -13,7 +13,7 @@ typedef struct {
 } Transicion;
 
 int main() {
-    FILE *fconf = fopen("Conf.txt", "r");
+    FILE *fconf = fopen("Configuracion.txt", "r");
     FILE *fcadenas = fopen("Cadenas.txt", "r");
     if (!fconf || !fcadenas) {
         printf("Error al abrir archivos.\n");
@@ -97,4 +97,5 @@ int main() {
     fclose(fcadenas);
     return 0;
 }
+
 
