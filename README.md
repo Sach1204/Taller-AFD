@@ -47,7 +47,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-## 1. cargar_configuracion(archivo_conf)
+## 1. Cargar configuración
 ```txt
 # Estados
 q0,q1
