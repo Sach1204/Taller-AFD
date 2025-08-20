@@ -26,7 +26,7 @@ def evaluar_cadena(cadena, estado_inicial, estados_aceptacion, transiciones):
 
 
 def main():
-    estados, alfabeto, estado_inicial, estados_aceptacion, transiciones = cargar_configuracion('Conf.txt')
+    estados, alfabeto, estado_inicial, estados_aceptacion, transiciones = cargar_configuracion('Configuracion.txt')
     
     with open('Cadenas.txt', 'r') as f:
         cadenas = [line.strip() for line in f if line.strip()]
@@ -38,3 +38,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
