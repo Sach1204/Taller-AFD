@@ -68,12 +68,9 @@ q1,0,q0
 q1,1,q1
 
 ```
-Objetivo: Cargar la configuración del autómata desde un archivo (En este caso, Conf.txt)
-
-
+Cargar la configuración del autómata desde un archivo (En este caso, Conf.txt)
 # 2. evaluar_cadena(cadena, estado_inicial, estados_aceptacion, transiciones)
-
-Objetivo: Determinar si una cadena es aceptada por el autómata.
+Determinar si una cadena es aceptada por el autómata.
 ```python
 def evaluar_cadena(cadena, estado_inicial, estados_aceptacion, transiciones):
     estado_actual = estado_inicial
@@ -126,7 +123,6 @@ def main():
 ---
 ## Codigo en C
 ```c
-- **afd.c** → Código fuente en C del autómata.
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -304,7 +300,13 @@ int main(void) {
     return 0;
 }
 ```
-- **Conf.txt** → Configuración del autómata (estados, alfabeto, transiciones, estado inicial y estados de aceptación).
+**Conf.txt** → Configuración del autómata (estados, alfabeto, transiciones, estado inicial y estados de aceptación).
+```c
+def cargar_configuracion(archivo_conf):
+ with open(archivo_conf, 'r') as f:
+        lineas = [line.strip() for line in f if line.strip() and not line.startswith("#")]
+```
+Cargar la configuración del autómata desde un archivo (En este caso, Conf.txt)
 ```txt
 # Estados
 q0,q1
@@ -325,7 +327,19 @@ q1,0,q0
 q1,1,q1
 
 ```
-- **Cadenas.txt** → Conjunto de cadenas que serán evaluadas.
+**Cadenas.txt** → Conjunto de cadenas que serán evaluadas.
+```c
+def evaluar_cadena(cadena, estado_inicial, estados_aceptacion, transiciones):
+    estado_actual = estado_inicial
+    for simbolo in cadena:
+        if (estado_actual, simbolo) in transiciones:
+            estado_actual = transiciones[(estado_actual, simbolo)]
+        else:
+            return False
+```
+Esta función evalúa si una cadena es aceptada por el autómata, aplicando las transiciones y Recorre la cadena símbolo por símbolo Si hay transición, cambia de estado. Si no, la cadena no es aceptada. La cadena es aceptada si el estado final está en los estados de aceptación.
+
+**TxT de Prueba**
 ```txt
 0
 1
