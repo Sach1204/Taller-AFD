@@ -4,7 +4,7 @@
 Este proyecto implementa un **Autómata Finito Determinista (AFD)** en dos lenguajes: **Python** y **C**.  
 El AFD lee su configuración desde un archivo `Conf.txt` y evalúa cadenas (números en binario) desde un archivo `Cadenas.txt`.
 
-## Codigo en Python ##
+## Solucion en Python ##
 ```python
 def cargar_configuracion(archivo_conf):
     with open(archivo_conf, 'r') as f:
