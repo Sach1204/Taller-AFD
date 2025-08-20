@@ -118,5 +118,6 @@ def main():
         resultado = "ACEPTA" if evaluar_cadena(cadena, estado_inicial, estados_aceptacion, transiciones) else "NO ACEPTA"
         print(f"{cadena}: {resultado}")
 ```
-## 4 Respuesta mostrada en terminal
+## 4. Respuesta mostrada en terminal.
+
 <img width="1068" height="326" alt="image" src="https://github.com/user-attachments/assets/d5325059-c292-4587-823c-5052c3544b40" />
