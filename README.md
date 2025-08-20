@@ -354,3 +354,6 @@ Esta función evalúa si una cadena es aceptada por el autómata, aplicando las 
 2. Se compila el programa con `gcc`:
    ```bash
    gcc afd.c -o afd
+# Respuesta Mostrada en Terminal
+<img width="813" height="588" alt="imagen" src="https://github.com/user-attachments/assets/856b7b0b-2095-49b4-ad34-51c469f32189" />
+
